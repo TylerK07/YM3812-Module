@@ -1,4 +1,4 @@
-# YM3812_Breadboard
+# YM3812-Module
 This code repository parallels a series of articles about a YM3812 module written on thingsmadesimple.com
 
 With each new article, the functionality of the module will grow, and the associated code and schematics will be available here.
