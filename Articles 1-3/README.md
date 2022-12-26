@@ -14,6 +14,8 @@ Introduces a basic implementation of the YM3812 circuit controlled by an AVR128D
 ### YM3812 Part 3: Getting Classy (Coming Soon)
 Walks through the implementation of the YM3812 class and other code that we used (but didn't discuss) in the second article. We cover the sendData and reset functions as well as the bit manipulation function that inserts sub-8-bit numbers into 8-bit registers. Then with these building blocks in place, we implement the register manipulation functions for all of the global, channel and operator level settings.
 
+<hr/>
+
 ## Documentation:
 The documentation folder contains a couple of helpful charts:
 ### Register Map
