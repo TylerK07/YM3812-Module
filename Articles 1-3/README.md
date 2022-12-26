@@ -1,32 +1,26 @@
-# YM3812_Breadboard
-This code repository parallels a series of articles about a YM3812 module written on thingsmadesimple.com
-
-With each new article, the functionality of the module will grow, and the associated code and schematics will be available here.
+# Articles 1-3
+The first three articles provide a brief introduction to the YM3812 sound processor and provide the basic schematic and code needed to get things up and running.
 
 <hr/>
 
 ## Current Articles
 
-### <a href='https://www.thingsmadesimple.com/2022/11/28/ym3812-part-1-register-basics/'>YM3812 Part 1: Register Basics</a> 
+### <a href='https://www.thingsmadesimple.com/2022/11/28/ym3812-part-1-register-basics/'>YM3812 Part 1: Register Basics</a>
 Focuses on FM Synthesis basics, the YM3812's register map and electrically controlling the chip's pins.
 
 ### YM3812 Part 2: FACE Reveal
-Introduces a basic implementation of the YM3812 circuit controlled by an AVR128DA28 microcontroller that we will build on in future articles. Think of it as a "Hello World" starting point that ensure the circuit works and that we can upload code to the microcontroller.
+Introduces a basic implementation of the YM3812 circuit controlled by an AVR128DA28 microcontroller that we will build upon in future articles. Think of it as a "Hello World"-like starting point that ensures the circuit works and that we can upload code into the microcontroller. We cover the function of each IC, the schematic, and after building it on breadboard, how to program it through the Arduino IDE.
 
-<hr/>
+### YM3812 Part 3: Getting Classy (Coming Soon)
+Walks through the implementation of the YM3812 class and other code that we uploaded into the breadboard module in the second article. We cover the sendData and reset functions as well as the bit manipulation function that inserts sub-8-bit numbers into 8-bit registers. Then with these building blocks in place, we implement register manipulation functions for all of the global, channel and operator level settings.
 
-## Articles Coming Soon
+## Documentation:
+The documentation folder contains a couple of helpful charts:
+<img src='Documentation/YM3812_RegisterMap.png' width='100%'/>
+The register map shows where each register setting is located on the chip.
 
-### YM3812 Part 3: Getting Classy
-Walks through the implementation of the YM3812 class used in Part 2 and describes how each of the register manipulation functions work.
+<img src='Documentation/YM3812_TimingChart.png' width='100%'/>
+The Timing Chart visually describes the order of events used to update a register on the YM3812.
 
-### YM3812 Part 4: MIDI Control
-Adds a MIDI input to our schematic, and discusses how to translate MIDI note numbers into frequencies the YM3812 understands
-
-### YM3812 Part 5: MIDI Poliphony
-Adds poliphony to the module, automatically choosing the best channel on the YM3812 to use.
-
-### YM3812 Part 6: Instrument Support
-Revise the YM3812 class implementation to support more generic instrument definition
-
-and more...
+<img src='Schematic/Schematic.png' width='100%'/>
+The schematic folder includes a basic schematic to use to get the YM3812 up and running with a minimal amount of fuss.
