@@ -33,9 +33,6 @@ Description:
 This library wraps Yamaha's YM3812 sound processor with functions that allow for
 direct manipulation of the chip's registers so you can build cool things like EuroRack modules!
 
-
---- Theory of Operation: ---
-
 */
 
 #include "Arduino.h"
