@@ -50,11 +50,13 @@ direct manipulation of the chip's registers so you can build cool things like Eu
 #define YM_LATCH 0b00001000                                                    // Pin 3, Port D - Output Latch
 #define YM_CS    0b00010000                                                    // Pin 4, Port D - Left YM3812 Chip Select
 
+// Optional debug light shows when information gets written to the YM3812
 #define DATA_LED 0b10000000                                                    // We can use this to see activity when data is being sent
 
-/********************************
-* Processor Control Functions   *
-********************************/
+/**************
+* Constructor *
+**************/
+
 YM3812::YM3812(){                                                              // Configure hardware to commuinicate with the YM3812
   PORTD.DIRSET = YM_IC | YM_A0 | YM_WR | YM_LATCH | YM_CS;                     // Set control lines high to output mode
   PORTD.OUTCLR = YM_LATCH;                                                     // Set the latch low to start
@@ -63,6 +65,10 @@ YM3812::YM3812(){                                                              /
   PORTD.DIRSET = DATA_LED;
   PORTD.OUTCLR = DATA_LED;
 }
+
+/***************************
+* Chip Control Functions   *
+***************************/
 
 void YM3812::reset(){
   SPI.begin();
@@ -115,12 +121,3 @@ void YM3812::sendData( uint8_t reg, uint8_t val ){
   PORTD.OUTCLR = DATA_LED;
 
 }
-
-/************************
-* Channel Functions     *
-************************/
-
-
-/***********************
-* Register Functions   *
-***********************/

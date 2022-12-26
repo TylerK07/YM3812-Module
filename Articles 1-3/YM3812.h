@@ -40,16 +40,14 @@ direct manipulation of the chip's registers so you can build cool things like Eu
 --- Theory of Operation: ---
 The code consists of a few levels of abstraction to make things easier to use
 
-GLOBAL FUNCTIONS:
-Affect the processer overall, with things like resetting, sending data and sending global effects.
+CHIP CONTROL FUNCTIONS:
+Affect the processer overall, with things like resetting and sending data.
 
 REGISTER CONTROL FUNCTIONS - These are the lowest level functions and directly manipulate
 the registers of the sound processor. Registers can be either global level (1 per chip),
 channel level (1 per channel x9) or operator level (1 per operator x2 per channel x9).
 To update a register, you have to know which channel and operator's setting you want to change.
 
-CHANNEL CONTROL FUNCTIONS - These functions perform actions at a channel level, identifying
-the next available channel to write to, playing a note and translating patch data into register settings
 */
 
 
@@ -59,19 +57,19 @@ the next available channel to write to, playing a note and translating patch dat
 
 /*--------- SET & GET bits with a helper macro! ---------
 Set the bits in an 8-bit variable using a bit mask. The bit mask should be right-aligned
-for the number of bits you want to include. The shift argument left shifts the bits into the
+for the number of bits you want to include. The offset argument left shifts the bits into the
 right position to insert into the register. For example, if you wanted to update bits 4-6 on
-variable "var", you would go:
+variable "regVal", you would go:
 
-SET_BITS( var, 0b00000111, 4, val );
+SET_BITS( regVal, 0b00000111, 4, newVal );
 
-To get the bits, mask out the ones you want to keep, and use shift to right shift them to end.
+To get the bits, mask out the ones you want to keep, and use offset to right-shift them to end.
 To retreive the bits we just set above, use:
 
-val = GET_BITS( var, 0b01110000, 4 );
+val = GET_BITS( regVal, 0b01110000, 4 );
 */
 #define SET_BITS( regVal, mask, offset, newVal) ((regVal) = ((regVal) & (~((mask)<<(offset)))) | (((newVal) & (mask)) << (offset)))
-#define GET_BITS( var, mask, shift ) ( ((var) & (mask)) >> (shift) )
+#define GET_BITS( regVal, mask, shift ) ( ((regVal) & (mask)) >> (shift) )
 
 
 
@@ -103,8 +101,11 @@ class YM3812 {                                                                  
 
 
   public:
-    //---------------- GENERAL FUNCTIONS ----------------//
     YM3812();                                                                                     // Constructor
+
+    /***************************
+    * Chip Control Functions   *
+    ***************************/
     void reset();                                                                                 // Reset the sound procesor and all class settings
     void sendData(uint8_t reg, uint8_t val);                                                      // Send data to the sound processor
 
