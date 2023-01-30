@@ -6,4 +6,4 @@ This article introduces the circuitry and functionality necessary to implement M
 
 ### Schematic
 The schematic folder includes adds MIDI functionality to the basic schematic used in articles 1-3.
-<img src='Schematic/Schematic.png' width='100%'/>
+<img src='Schematic/YM3812_Breadboard_w_MIDI.png' width='100%'/>
