@@ -16,16 +16,16 @@ Introduces a basic implementation of the YM3812 circuit controlled by an AVR128D
 ### <a href='https://www.thingsmadesimple.com/2023/01/21/ym3812-part-3-behind-the-code/'>YM3812 Part 3: Behind the Code</a>
 Walks through the implementation of the YM3812 class used in Part 2 and describes how each of the register manipulation functions work.
 
+### <a href='https://www.thingsmadesimple.com/2023/02/11/ym3812-part-4-midi-journey/'>YM3812 Part 4: MIDI Journey</a>
+Adds a MIDI input to our schematic, and discusses how to translate MIDI note numbers into frequencies the YM3812 understands
+
+### <a href='https://www.thingsmadesimple.com/2023/03/05/ym3812-part-5-midi-polyphony/'>YM3812 Part 5: MIDI Polyphony</a>
+Adds Polyphony to our breadboard module, walking through a couple of algorithms in the process.
+
 <hr/>
 
 ## Articles Coming Soon
 
-
-### YM3812 Part 4: MIDI Control
-Adds a MIDI input to our schematic, and discusses how to translate MIDI note numbers into frequencies the YM3812 understands
-
-### YM3812 Part 5: MIDI Poliphony
-Adds poliphony to the module, automatically choosing the best channel on the YM3812 to use.
 
 ### YM3812 Part 6: Instrument Support
 Revise the YM3812 class implementation to support more generic instrument definition
