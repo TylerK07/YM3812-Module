@@ -1,7 +1,7 @@
 # InstrumentConverter
 This nodejs code extracts sound patch settings from .op2 files and converts them into the instruments.h file
 
-##Usage:
+## Usage:
 node op2.js GENMIDI.op2 instruments.h
 
 This will extract any sound patches from GENMIDI.op2 and output a new file called instruments.h.
