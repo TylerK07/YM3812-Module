@@ -22,12 +22,24 @@ Adds a MIDI input to our schematic, and discusses how to translate MIDI note num
 ### <a href='https://www.thingsmadesimple.com/2023/03/05/ym3812-part-5-midi-polyphony/'>YM3812 Part 5: MIDI Polyphony</a>
 Adds Polyphony to our breadboard module, walking through a couple of algorithms in the process.
 
+### <a href='https://www.thingsmadesimple.com/2023/04/29/ym3812-part-6-patches/'>YM3812 Part 6: Patches</a>
+Revise the YM3812 class implementation to support more generic instrument definition
+
+### <a href='https://www.thingsmadesimple.com/2023/05/13/ym3812-part-7-percussive-maintenance/'>YM3812 Part 7: Percussive Maintenance</a>
+Add General MIDI drum support by linking different drum sounds to different notes on the keyboard
+
+### <a href='https://www.thingsmadesimple.com/2023/05/30/ym3812-part-8-velocity-sensitivity/'>YM3812 Part 8: Velocity Sensitivity</a>
+Add touch sensitivity to the module by selectively scaling the right operator levels
+
 <hr/>
 
-## Articles Coming Soon
+## Article Backlog:
 
+### YM3812 Part ?: Pitch Bend
+Add pitch bend to the module
 
-### YM3812 Part 6: Instrument Support
-Revise the YM3812 class implementation to support more generic instrument definition
+### YM3812 Part ?: Virtual 4-OP Voices
+Add support for virtual four-operator voices
+
 
 and more...
