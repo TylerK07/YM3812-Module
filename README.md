@@ -31,12 +31,30 @@ Add General MIDI drum support by linking different drum sounds to different note
 ### <a href='https://www.thingsmadesimple.com/2023/05/30/ym3812-part-8-velocity-sensitivity/'>YM3812 Part 8: Velocity Sensitivity</a>
 Add touch sensitivity to the module by selectively scaling the right operator levels
 
+### <a href='https://www.thingsmadesimple.com/2023/07/28/ym3812-part-9-synth-card/'>YM3812 Part 9: SynthCard</a>
+Turn that breadboard into a business card sized PCB!
+
+### <a href='https://www.thingsmadesimple.com/2023/09/01/ym3812-part-10-pitch-bend/'>YM3812 Part 10: Pitch Bend</a>
+Add pitch bend capabilities and shred on a YM3812
+
+
+
+
 <hr/>
 
 ## Article Backlog:
 
-### YM3812 Part ?: Pitch Bend
-Add pitch bend to the module
+### YM3812 Part ?: OPL2 in STEREO!
+Add another YM3812 chip and some stereo effects for panning and detuning
+
+### YM3812 Part ?: Adding a menu to swap patches
+Add a TFT Screen and a Rotary Encoder so we can adjust patch assignments to MIDI channels
+
+### YM3812 Part ?: Adjust Patch Properties
+Add buttons and a menu system that lets us adjust patch settings individually
+
+### YM3812 Part ?: Visualizing 2-OP envelopes
+Add a graphical visualization that helps us interpret patch settings
 
 ### YM3812 Part ?: Virtual 4-OP Voices
 Add support for virtual four-operator voices
