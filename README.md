@@ -34,7 +34,7 @@ Add touch sensitivity to the module by selectively scaling the right operator le
 ### <a href='https://www.thingsmadesimple.com/2023/07/28/ym3812-part-9-synth-card/'>YM3812 Part 9: SynthCard</a>
 Turn that breadboard into a business card sized PCB!
 
-### <a href='https://www.thingsmadesimple.com/2023/09/01/ym3812-part-10-pitch-bend/'>YM3812 Part 10: Pitch Bend</a>
+### <a href='https://www.thingsmadesimple.com/2023/09/02/ym3812-part-10-pitch-bend/'>YM3812 Part 10: Pitch Bend</a>
 Add pitch bend capabilities and shred on a YM3812
 
 
